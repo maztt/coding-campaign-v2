@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Pokemon';
+}
+
+@font-face {
+  font-family: 'Pokemon';
+  src: url('../fonts/Pokemon\ Classic.ttf'); 
+}
+
+html {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgb(175, 175, 175), rgb(24, 155, 155));
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+main {
+  margin-top: 100px;
+}
+
+div.professor-oak {
+  margin-bottom: 20px;
+}
+
+.container-messages {
+  margin-top: 20px;
+  display: block;
+  margin: auto;
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 30px;
+  border: 10px double black;
+  /* border-radius: 10px; */
+}
+
+.container-messages > p {
+  width: 90%;
+  max-width: 40%;
+  padding-left: 10px;
+  font-size: 1.5rem;
+}
+
+.none {
+  display: none;
+}
+
+img {
+  display: block;
+  justify-content: center;
+  margin: auto;
+}

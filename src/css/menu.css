@@ -1,0 +1,57 @@
+@font-face {
+font-family: 'Pokemon';
+src: url('../fonts/Pokemon\ Classic.ttf'); 
+}
+
+body {
+  background-color: black;
+}
+
+.start-game {
+  background-color: white;
+  color: black;
+  font-family: 'Pokemon', sans-serif;
+  min-width: 350px;
+  border: 10px double black;
+  border-radius: 10px;
+  width: 30%;
+  font-size: 1.5em;  
+}
+
+span {
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+}
+
+.option-1, .option-2 {
+  gap: .5em;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px 10px 25px;
+}
+
+.selected > img {
+  visibility: visible;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.options__option, .options__select {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  span {
+    font-size: 0.875rem;
+  }
+}
