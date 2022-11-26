@@ -7,7 +7,7 @@ body {
   background-color: black;
 }
 
-.start-game {
+.start-game, .options {
   background-color: white;
   color: black;
   font-family: 'Pokemon', sans-serif;
@@ -37,8 +37,20 @@ img {
   padding: 10px 0px 10px 25px;
 }
 
+.options__setting {
+  padding: 10px 0px 10px 25px;
+}
+
 .selected > img {
   visibility: visible;
+}
+
+.selection > img {
+  visibility: visible;
+}
+
+img.reverse {
+  transform: scaleX(-1);
 }
 
 a {
@@ -48,6 +60,40 @@ a {
 
 .options__option, .options__select {
   display: block;
+}
+
+.selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.selection__option > span {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  padding: 0 50px;
+}
+
+.selection__multiple > span {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  gap: 5px;
+}
+
+.selection:first-child {
+  order: 1;
+}
+
+.selection:nth-child(2) {
+  order: 2;
+}
+
+.selection:last-child {
+  order: 3;
 }
 
 @media screen and (max-width: 768px) {
