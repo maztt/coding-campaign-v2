@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coding Campaign - Begin your journey</title>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Campaign</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="src/css/menu.css">
-  <script src="src/js/page-newgame.js" defer></script>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
 
-</head>
+    <script src="src/js/index.js" defer></script>
+  </head>
+  <body>
 
-<body>
-  
-  <div class="container">
-    <div class="start-game">
-      <div id="options-1" class="option-1 selected"><img src="src/images/arrow.png" alt="Arrow Option"><span><a id="newgame" href="intro.html">New Game</a></span></div>
-      <div id="options-2" class="option-2"><img src="src/images/arrow.png" alt="Arrow Option"><span><a id="options" href="options.html">Options</a></span></div>
-    </div>
-  </div>
+      <header>
+        <h1 class="header-title">Coding Campaign</h1>
+        <p class="header-subtitle">This is where your journey begins...</p>
+      </header>
 
-</body>
+      <main>
+        <div class="container">
+          <label for="i-username"><h3>Your name in this adventure will be...</h3></label>
+          <input  class="text"
+            type="text"
+            name="username"
+            id="i-username"
+            placeholder="Insert your name"
+          />
+          <input class="button" type="submit" value="Start your campaign" />
+        </div>
+      </main>
+  </body>
 </html>

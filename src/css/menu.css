@@ -7,16 +7,67 @@ body {
   background-color: black;
 }
 
-.start-game, .options {
+div.menu {
+  font-family: 'Pokemon', sans-serif;
   background-color: white;
   color: black;
-  font-family: 'Pokemon', sans-serif;
   min-width: 350px;
   border: 10px double black;
   border-radius: 10px;
   width: 30%;
-  font-size: 1.5em;  
+  font-size: 1.5em;
 }
+
+div.box__settings {
+  padding: 10px 0px 10px 25px;
+}
+
+div.settings__title {
+
+}
+
+span.title_name {
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+div.setting__options {
+
+}
+
+div.options_selection {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 70%;
+}
+
+div.options_multiple {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 85%;
+}
+
+div.options_selection > img, div.options_multiple > img {
+  visibility: visible;
+}
+
+div.options_group {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+span.group_item {
+
+}
+
 
 span {
   text-transform: uppercase;
@@ -58,41 +109,49 @@ a {
   color: black;
 }
 
-.options__option, .options__select {
-  display: block;
-}
 
-.selection {
+/* .selection {
   display: flex;
+  margin: auto;
   align-items: center;
   justify-content: center;
   height: 50px;
-}
+  width: 70%;
+} */
 
-.selection__option > span {
+/* 
+.selection__option {
+  width: 50%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+} */
+
+/* .selection__option > span {
+  margin: auto;
   position: relative;
   justify-content: center;
   text-align: center;
   padding: 0 50px;
-}
+} */
 
-.selection__multiple > span {
+/* .selection__multiple > span {
   position: relative;
   justify-content: center;
   text-align: center;
   padding: 0 20px;
   gap: 5px;
-}
+} */
 
-.selection:first-child {
+div.options_selection:first-child {
   order: 1;
 }
 
-.selection:nth-child(2) {
+div.options_selection:nth-child(2) {
   order: 2;
 }
 
-.selection:last-child {
+div.options_selection:last-child {
   order: 3;
 }
 
