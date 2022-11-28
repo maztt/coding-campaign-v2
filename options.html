@@ -7,7 +7,7 @@
   <title>Coding Campaign - Begin your journey</title>
 
   <link rel="stylesheet" href="src/css/menu.css">
-  <script src="src/js/page-options.js" defer></script>
+  <script src="src/js/page-option.js" defer></script>
 
 </head>
 
@@ -17,7 +17,7 @@
     <div class="menu">
 
       <div class="box__settings">
-        <div class="settings__title selected">
+        <div id="option_productivity" class="settings__title selected">
           <img class="title_arrow" src="src/images/arrow.png" alt="Arrow Option">
           <span class="title_name">
             Productivity
@@ -26,17 +26,17 @@
         <div class="setting__options">
           <div class="options_selection">
             <img class="reverse" src="src/images/sided-arrow.png" alt="">
-              <div class="options_group">
-                <span class="group_item" style="display: none;">Morning</span>
-                <span class="group_item" style="display: none;">Afternoon</span>
-                <span class="group_item">Night</span>
-              </div>
+            <div class="options_group">
+              <span class="group_item" style="display: none;">Morning</span>
+              <span class="group_item" style="display: none;">Afternoon</span>
+              <span class="group_item">Night</span>
+            </div>
             <img src="src/images/sided-arrow.png" alt="">
           </div>
         </div>
       </div>
       <div class="box__settings">
-        <div class="settings__title selected">
+        <div id="option_studying" class="settings__title">
           <img class="title_arrow" src="src/images/arrow.png" alt="Arrow Option">
           <span class="title_name">
             Studying Style
@@ -55,10 +55,10 @@
         </div>
       </div>
       <div class="box__settings">
-        <div class="settings__title selected">
+        <div id="option_listening" class="settings__title">
           <img class="title_arrow" src="src/images/arrow.png" alt="Arrow Option">
           <span class="title_name">
-            Listen to Criticism
+            Listening to Criticism
           </span>
         </div>
         <div class="setting__options">
@@ -73,7 +73,7 @@
         </div>
       </div>
       <div class="box__settings">
-        <div class="settings__title selected">
+        <div id="option_tohave" class="settings__title">
           <img class="title_arrow" src="src/images/arrow.png" alt="Arrow Option">
           <span class="title_name">
             I want to have
@@ -92,7 +92,7 @@
         </div>
       </div>
       <div class="box__settings">
-        <div class="settings__title selected">
+        <div id="option_battle" class="settings__title">
           <img class="title_arrow" src="src/images/arrow.png" alt="Arrow Option">
           <span class="title_name">
             Battle Style
@@ -110,7 +110,7 @@
         </div>
       </div>
       <div class="box__settings">
-        <div class="settings__title selected">
+        <div id="option_multiplayer" class="settings__title">
           <img class="title_arrow" src="src/images/arrow.png" alt="Arrow Option">
           <span class="title_name">
             Multiplayer
@@ -129,7 +129,7 @@
         </div>
       </div>
       <div class="box__settings">
-        <div class="settings__title selected">
+        <div id="option_language" class="settings__title">
           <img class="title_arrow" src="src/images/arrow.png" alt="Arrow Option">
           <span class="title_name">
             Language
@@ -147,10 +147,10 @@
         </div>
       </div>
       <div class="box__settings">
-        <div class="settings__title selected">
+        <div id="option_exit" class="settings__title">
           <img class="title_arrow" src="src/images/arrow.png" alt="Arrow Option">
           <span class="title_name">
-            Exit
+            <a id="i-exit" href="index.html">Exit</a>
           </span>
         </div>
       </div>
