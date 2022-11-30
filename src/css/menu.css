@@ -22,10 +22,6 @@ div.box__settings {
   padding: 10px 0px 10px 25px;
 }
 
-div.settings__title {
-
-}
-
 span.title_name {
   text-transform: uppercase;
   display: inline-block;
@@ -76,6 +72,14 @@ div.options_group {
   gap: 20px;
 }
 
+div.options_group.multiple {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  gap: 20px;
+  color: gray;
+}
+
 span.group_item {
 
 }
@@ -109,6 +113,11 @@ div.option {
 
 .dontdisplay {
   display: none;
+}
+
+.chosen {
+  color: rgb(118, 34, 34);
+  text-shadow: 1px 1px .2px red;
 }
 
 img.reverse {

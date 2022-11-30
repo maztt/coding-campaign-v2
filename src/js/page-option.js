@@ -24,6 +24,19 @@ function exit() {
   setTimeout(action_Exit.click(), 2000)
 }
 
+function getOption(optionIndex) {
+  let items = options[optionIndex].nextElementSibling.firstElementChild.children[1].children
+  let chosenOption;
+  
+  for (let i = 0; i < items.length; i++) {
+    if (!items[i].classList.contains('dontdisplay') || items[i].classList.contains('chosen')) {
+      chosenOption = i;
+    }
+  }
+
+  return chosenOption;
+}
+
 
 document.onkeydown = function(e) {
   const event = e.key
@@ -34,13 +47,16 @@ document.onkeydown = function(e) {
       if (optionIndex == 0) {
         return
       } else {
-        itemIndex = 0;
+
         optionIndex--
+        itemIndex = getOption(optionIndex);
+
         options[optionIndex + 1].classList.remove('selected')
         options[optionIndex].classList.add('selected')
         optionDisable()
         optionEnable()
         playMenuSound()
+
       }
       break
       
@@ -48,13 +64,18 @@ document.onkeydown = function(e) {
       if (optionIndex == 7) {
         return
       } else {
-        itemIndex = 0;
+
         optionIndex++
+        if (optionIndex != 7) {
+          itemIndex = getOption(optionIndex);
+        }
+
         options[optionIndex - 1].classList.remove('selected')
         options[optionIndex].classList.add('selected')
         optionDisable()
         optionEnable()
         playMenuSound()
+
       }
       break
 
@@ -63,9 +84,17 @@ document.onkeydown = function(e) {
       if (itemIndex >= items.length - 1) {
         return
       } else {
-        itemIndex++
-        items[itemIndex].classList.remove('dontdisplay')
-        items[itemIndex - 1].classList.add('dontdisplay')
+        if (optionIndex == 3) {
+          itemIndex++
+          items[itemIndex].classList.add('chosen')
+          items[itemIndex - 1].classList.remove('chosen')
+        } else {
+          itemIndex++
+          items[itemIndex].classList.remove('dontdisplay')
+          items[itemIndex - 1].classList.add('dontdisplay')
+          // items[itemIndex + 1].classList.add('dontdisplay')
+        }
+
         playMenuSound()
       }
       break
@@ -75,9 +104,16 @@ document.onkeydown = function(e) {
       if (itemIndex == 0) {
         return
       } else {
+        if (optionIndex == 3) {
+          itemIndex--
+          items[itemIndex].classList.add('chosen')
+          items[itemIndex + 1].classList.remove('chosen')
+        } else {
         itemIndex--
         items[itemIndex].classList.remove('dontdisplay')
         items[itemIndex + 1].classList.add('dontdisplay')
+        // items[itemIndex - 1].classList.add('dontdisplay')
+        }
         playMenuSound()
       }
       break
@@ -94,7 +130,6 @@ document.onkeydown = function(e) {
 const options_group = document.getElementsByClassName('options_group')
 
 const optionEnable = () => {
-  
   
   for (let i = 0; i < options_group.length; i++) {
     optionSelected = options_group[i].parentElement.parentElement.previousElementSibling;
@@ -114,3 +149,5 @@ const optionDisable = () => {
   }
 
 }
+
+
