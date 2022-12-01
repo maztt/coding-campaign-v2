@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/animations.css">
 
     <script src="src/js/index.js" defer></script>
   </head>
@@ -21,14 +22,17 @@
 
       <main>
         <div class="container">
-          <label for="i-username"><h3>Your name in this adventure will be...</h3></label>
-          <input  class="text"
-            type="text"
-            name="username"
-            id="i-username"
-            placeholder="Insert your name"
-          />
-          <input class="button" type="submit" value="Start your campaign" />
+          <form>
+            <label for="i-username"><h3>Your name in this adventure will be...</h3></label>
+            <input  class="text"
+              type="text"
+              name="username"
+              id="i-username"
+              autocomplete="off"
+              placeholder="Insert your name"
+            />
+            <input class="button" type="submit" value="Start your campaign" />
+          </form>
         </div>
       </main>
   </body>

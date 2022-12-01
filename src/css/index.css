@@ -1,14 +1,22 @@
+.container {
+  width: 700px;
+}
 
 .header-title {
   margin-top: 70px;
   font-family: '5cil', sans-serif;
   color: white;
+  animation: text-glowing-red .3s ease-in-out infinite;
+  animation-direction: alternate;
 }
 
 .header-subtitle {
   color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  animation: text-glowing-blue .3s ease-in-out infinite;
+  animation-direction: alternate;
 }
+
 
 
 .text {
@@ -41,4 +49,9 @@ h3 {
 .button:active {
   position: relative;
   top: 1px;
+}
+
+input#i-username {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
 }
