@@ -29,7 +29,24 @@ function getOption(optionIndex) {
   let chosenOption;
   
   for (let i = 0; i < items.length; i++) {
-    if (!items[i].classList.contains('dontdisplay') || items[i].classList.contains('chosen')) {
+    if (!items[i].classList.contains('dontdisplay')) {
+      chosenOption = i;
+    }
+
+    if (items[i].classList.contains('chosen')) {
+      chosenOption = i;
+    }
+  }
+
+  return chosenOption;
+}
+
+function getMultipleOptions(optionIndex) {
+  let items = options[optionIndex].nextElementSibling.firstElementChild.children[1].children
+  let chosenOption;
+
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].classList.contains('chosen')) {
       chosenOption = i;
     }
   }
@@ -49,12 +66,18 @@ document.onkeydown = function(e) {
       } else {
 
         optionIndex--
-        itemIndex = getOption(optionIndex);
+
+        if (optionIndex == 3) {
+          itemIndex = getMultipleOptions(optionIndex);
+        } else {
+          itemIndex = getOption(optionIndex);
+        }
 
         options[optionIndex + 1].classList.remove('selected')
         options[optionIndex].classList.add('selected')
         optionDisable()
         optionEnable()
+        arrowLimiter()
         playMenuSound()
 
       }
@@ -66,7 +89,10 @@ document.onkeydown = function(e) {
       } else {
 
         optionIndex++
-        if (optionIndex != 7) {
+
+        if (optionIndex == 3) {
+          itemIndex = getMultipleOptions(optionIndex);
+        } else if (optionIndex != 7) {
           itemIndex = getOption(optionIndex);
         }
 
@@ -74,6 +100,7 @@ document.onkeydown = function(e) {
         options[optionIndex].classList.add('selected')
         optionDisable()
         optionEnable()
+        arrowLimiter()
         playMenuSound()
 
       }
@@ -92,9 +119,9 @@ document.onkeydown = function(e) {
           itemIndex++
           items[itemIndex].classList.remove('dontdisplay')
           items[itemIndex - 1].classList.add('dontdisplay')
-          // items[itemIndex + 1].classList.add('dontdisplay')
         }
 
+        arrowLimiter()
         playMenuSound()
       }
       break
@@ -112,8 +139,8 @@ document.onkeydown = function(e) {
         itemIndex--
         items[itemIndex].classList.remove('dontdisplay')
         items[itemIndex + 1].classList.add('dontdisplay')
-        // items[itemIndex - 1].classList.add('dontdisplay')
         }
+        arrowLimiter()
         playMenuSound()
       }
       break
@@ -146,6 +173,24 @@ const optionDisable = () => {
   for (let i = 0; i < options_group.length; i++) {
     options_group[i].parentElement.firstElementChild.style.visibility = 'hidden';
     options_group[i].parentElement.lastElementChild.style.visibility = 'hidden';
+  }
+
+}
+
+const arrowLimiter = () => {
+
+  items = options[optionIndex].nextElementSibling.firstElementChild.children[1].children
+
+  if (itemIndex == 0) {
+    options[optionIndex].nextElementSibling.firstElementChild.firstElementChild.style.opacity = '.5'
+  } else {
+    options[optionIndex].nextElementSibling.firstElementChild.firstElementChild.style.opacity = '1'
+  }
+
+  if (itemIndex == items.length - 1) {
+    options[optionIndex].nextElementSibling.firstElementChild.lastElementChild.style.opacity = '.5'
+  } else {
+    options[optionIndex].nextElementSibling.firstElementChild.lastElementChild.style.opacity = '1'
   }
 
 }
