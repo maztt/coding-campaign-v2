@@ -35,9 +35,8 @@ div.professor-oak {
   height: auto;
   padding: 20px;
   background-color: white;
-  border-radius: 30px;
   border: 10px double black;
-  /* border-radius: 10px; */
+  border-radius: 10px;
 }
 
 .container-messages > p {
@@ -47,7 +46,7 @@ div.professor-oak {
   font-size: 1.5rem;
 }
 
-.none {
+.dontdisplay {
   display: none;
 }
 

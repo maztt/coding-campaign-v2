@@ -17,3 +17,15 @@
     text-shadow: 0 0 .5px #ebd5d2, 0 0 .5px #ebd5d2, 0 0 .5px #ebd5d2, 0 0 .5px #ffbebe, 0 0 5px #ffbebe, 0 0 .5px #ffbebe, 0 0 5px #ffbebe, 0 0 2px #ffbebe;
   }
 }
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
