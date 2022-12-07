@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: '5cil', Courier, monospace;
+}
+
+
+@font-face {
+  font-family: '5cil';
+  src: url('../fonts/5Computers-In-Love.ttf'); 
+}
+
+@font-face {
+  font-family: 'command';
+  src: url('../fonts/PILOT_COMMAND.otf');
+}
+
+body {
+  background: darkgrey;
+}
+
+header.header {
+  z-index: 1;
+  display: flex;    
+  justify-content: center;
+}
+
+header.header h1.title {
+  color: red;
+  text-transform: uppercase;
+  font-size: 52px;
+  line-height: 102px;
+  -webkit-text-stroke: 2px var(--cor-titulo-forte);
+}
+
+div.preview {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+div.preview div.first-choice {
+ 
+}
+
+div.preview div.second-choice {
+}
+
+div.first-choice > img, div.second-choice > img {
+  max-width: 100px;
+  min-height: 400px;
+}
+
+div.container__characters {
+  margin: auto;
+  width: 800px;
+}
+
+ul.characters__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+li.list__character {
+  list-style-type: none;
+}
+
+ul.characters__list li.list__character > img {
+  width: 75px;
+  height: 75px;
+}
+
+ul.characters__list li.list__character > img:hover {
+  transform: scale(1.2);
+}
+
+button {
+  display: flex;
+  margin: auto;
+}
