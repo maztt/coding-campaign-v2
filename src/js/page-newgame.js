@@ -1,7 +1,7 @@
 window.alert('Maximize your experience by using the keyboard.')
 
 function playMenuSound() {
-  const menuSound = new Audio('src/audios/menu-sound-effect.mp4');
+  const menuSound = new Audio('../audios/menu-sound-effect.mp4');
   menuSound.play();
 }
 

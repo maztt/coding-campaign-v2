@@ -68,6 +68,6 @@ async function chatWriter() {
 }
 
 function playMenuSound() {
-  const menuSound = new Audio('src/audios/menu-sound-effect.mp4');
+  const menuSound = new Audio('../audios/menu-sound-effect.mp4');
   menuSound.play();
 }
