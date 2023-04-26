@@ -1,0 +1,21 @@
+{
+  "name": "coding-campaign-v2",
+  "version": "1.0.0",
+  "description": "This is a Work In Progress, improving the project [Coding Campaign](https://github.com/maztt/coding-campaign) to a new concept, style, function and others.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maztt/coding-campaign-v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maztt/coding-campaign-v2/issues"
+  },
+  "homepage": "https://github.com/maztt/coding-campaign-v2#readme"
+}
