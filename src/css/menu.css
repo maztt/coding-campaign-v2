@@ -27,10 +27,6 @@ span.title_name {
   display: inline-block;
 }
 
-div.setting__options {
-
-}
-
 div.options_selection {
   display: flex;
   margin: auto;
@@ -78,10 +74,6 @@ div.options_group.multiple {
   justify-content: space-between;
   gap: 20px;
   color: gray;
-}
-
-span.group_item {
-
 }
 
 span {

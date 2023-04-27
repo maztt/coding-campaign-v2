@@ -16,8 +16,6 @@
   box-sizing: border-box;
 }
 
-/*  */
-
 body {
   background-color: black;
 }
@@ -44,7 +42,6 @@ main {
   text-align: center;
   align-items: center;
 }
-
 
 .container {
   display: inline-block;
