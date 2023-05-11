@@ -1,18 +1,5 @@
 import { playMenuSound } from './sound-effects.js'
-
-const navigateToNewGame = () => {
-  const newGame = document.getElementById('newgame')
-  setTimeout(() => {
-    newGame.click(), 2000
-  })
-}
-
-const navigateToOptions = () => {
-  const options = document.getElementById('options')
-  setTimeout(() => {
-    options.click(), 2000
-  })
-}
+import { newGame, options } from './navigate-to.js'
 
 const option_NewGame = document.getElementById('option-newgame')
 const option_Options = document.getElementById('option-options')
@@ -34,9 +21,9 @@ document.onkeydown = function(e) {
         break
     case 'Enter':
         if (option_NewGame.classList.contains('selected')) {
-          navigateToNewGame()
+          newGame()
         } else {
-          navigateToOptions()
+          options()
         }
         break
     }

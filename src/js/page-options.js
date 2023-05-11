@@ -1,11 +1,5 @@
 import { playMenuSound } from './sound-effects.js'
-
-const navigateToHome = () => {
-  const action_Exit = document.getElementById('i-exit')
-  setTimeout(() => {
-    action_Exit.click(), 750   
-  })
-}
+import { home } from './navigate-to.js'
 
 const optionEnable = () => {
   for (let i = 0; i < options_group.length; i++) {
@@ -161,7 +155,7 @@ document.onkeydown = function(e) {
       case 'Enter':
         if (option_Exit.classList.contains('selected')) {
           playMenuSound()
-          navigateToHome()
+          home()
         }
   }
 }
