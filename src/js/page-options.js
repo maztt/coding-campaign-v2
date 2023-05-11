@@ -1,10 +1,10 @@
-const playMenuSound = () => {
-  const menuSound = new Audio('../audios/menu-sound-effect.mp4');
-  menuSound.play();
-}
+import { playMenuSound } from './sound-effects.js'
 
-const exit = () => {
-  setTimeout(action_Exit.click(), 2000)
+const navigateToHome = () => {
+  const action_Exit = document.getElementById('i-exit')
+  setTimeout(() => {
+    action_Exit.click(), 750   
+  })
 }
 
 const optionEnable = () => {
@@ -51,7 +51,6 @@ const option_Battle = document.getElementById('option_battle')
 const option_Multiplayer = document.getElementById('option_multiplayer')
 const option_Language = document.getElementById('option_language')
 const option_Exit = document.getElementById('option_exit')
-const action_Exit = document.getElementById('i-exit')
 const options_group = document.getElementsByClassName('options_group')
 const options = [option_Productivity, option_Studying, option_Listening, option_ToHave, option_Battle, option_Multiplayer, option_Language, option_Exit];
 
@@ -83,6 +82,13 @@ function getMultipleOptions(optionIndex) {
   return chosenOption;
 }
 
+const manageOption = () => {
+  optionDisable()
+  optionEnable()
+  arrowLimiter()
+  playMenuSound()
+}
+
 document.onkeydown = function(e) {
   const event = e.key
   switch(event) {
@@ -98,10 +104,7 @@ document.onkeydown = function(e) {
         }
         options[optionIndex + 1].classList.remove('selected')
         options[optionIndex].classList.add('selected')
-        optionDisable()
-        optionEnable()
-        arrowLimiter()
-        playMenuSound()
+        manageOption()
       }
       break     
     case 'ArrowDown':
@@ -116,10 +119,7 @@ document.onkeydown = function(e) {
         }
         options[optionIndex - 1].classList.remove('selected')
         options[optionIndex].classList.add('selected')
-        optionDisable()
-        optionEnable()
-        arrowLimiter()
-        playMenuSound()
+        manageOption()
       }
       break
     case 'ArrowRight':
@@ -160,7 +160,8 @@ document.onkeydown = function(e) {
       break
       case 'Enter':
         if (option_Exit.classList.contains('selected')) {
-          exit()
+          playMenuSound()
+          navigateToHome()
         }
   }
 }

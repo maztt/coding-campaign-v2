@@ -1,7 +1,4 @@
-const playMenuSound = () => {
-  const menuSound = new Audio('./src/audios/menu-sound-effect.mp4')
-  menuSound.play()
-}
+import { playMenuSound } from './sound-effects.js'
 
 const navigateToNewGame = () => {
   const newGame = document.getElementById('newgame')
